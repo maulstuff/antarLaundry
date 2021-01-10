@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "421501589530",
+    "firebase_url": "https://antarlaundry-b5739.firebaseio.com",
+    "project_id": "antarlaundry-b5739",
+    "storage_bucket": "antarlaundry-b5739.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:421501589530:android:a6a4b4b46b9320732c19a3",
+        "android_client_info": {
+          "package_name": "com.antarlaundry"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "421501589530-9rd9n9em80kd1l0r5tev1rb593h67li7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCK3NGkEHwLJRc0uniXqFpEdzLox0TqD2c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "421501589530-9rd9n9em80kd1l0r5tev1rb593h67li7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
