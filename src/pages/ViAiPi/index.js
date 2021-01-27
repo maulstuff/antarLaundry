@@ -28,7 +28,7 @@ export default class ViAiPi extends Component {
                 nama: this.state.nama,
                 nomorHP: this.state.nomorHP,
                 alamat: this.state.alamat,
-                kiloan: this.state.vip
+                vip: this.state.vip
             }
             menuVIP
                 .push(mevip)

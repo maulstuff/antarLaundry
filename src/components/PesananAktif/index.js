@@ -1,15 +1,15 @@
 import React from 'react';
-import {StyleSheet, Text,View, Dimensions, TouchableOpacity} from 'react-native';
-import {IconPesananAktif} from '../../assets';
+import { StyleSheet, Text, View, Dimensions, TouchableOpacity } from 'react-native';
+import { IconPesananAktif } from '../../assets';
 import { WARNA_UTAMA, WARNA_WARNING, WARNA_ABU_ABU } from '../../utils/constant';
 
-const PesananAktif = ({title, status}) => {
+const PesananAktif = ({ title, status }) => {
   return (
     <TouchableOpacity style={styles.container}>
       <IconPesananAktif />
       <View style={styles.text}>
-      <Text style={styles.title}>{title}</Text>
-      <Text style={styles.status(status)}>{status}</Text>
+        <Text style={styles.title}>{title}</Text>
+        <Text style={styles.status(status)}>{status}</Text>
       </View>
     </TouchableOpacity>
   );
@@ -34,19 +34,19 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.29,
     shadowRadius: 4.65,
     elevation: 7,
-    marginVertical: windowHeight*0.02,
+    marginVertical: windowHeight * 0.02,
     alignItems: 'center'
   },
   text: {
-    marginLeft: windowWidth*0.02,
+    marginLeft: windowWidth * 0.05,
   },
   title: {
     fontSize: 18,
-    fontFamily: 'TitilliumWeb-SemiBold'
+    fontFamily: 'TitilliumWeb-SemiBold',
   },
   status: (status) => ({
     fontSize: 14,
     fontFamily: 'TitilliumWeb-Light',
-    color: status === 'Sudah Selesai' ? WARNA_UTAMA : status === 'Masih Dicuci' ? WARNA_WARNING : WARNA_ABU_ABU,
+    color: status === 'Silahkan klik disini' ? WARNA_UTAMA : status === 'Masih Dicuci' ? WARNA_WARNING : WARNA_ABU_ABU,
   })
 });

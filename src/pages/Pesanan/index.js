@@ -1,61 +1,29 @@
 import React, { Component } from 'react'
-import { Text, StyleSheet, View } from 'react-native'
-import { CardKontak, CardSetrika } from '../../components'
-import FIREBASE from '../../config/FIREBASE'
-import { ScrollView } from 'react-native-gesture-handler';
+import { StyleSheet, Text, View, TouchableOpacity } from 'react-native'
+import { PesananAktif } from '../../components'
 
 export class Pesanan extends Component {
-    constructor(props) {
-        super(props)
-
-        this.state = {
-            kiloan: {},
-            kiloanKey: [],
-            setrika: {},
-            setrikaKey: []
-        }
-    }
-
-    componentDidMount() {
-        FIREBASE.database()
-            .ref("Menu Setrika")
-            .once('value', (querySnapShot) => {
-
-                let data = querySnapShot.val() ? querySnapShot.val() : {};
-                let kiloanItem = { ...data };
-                let setrikaItem = { ...data };
-
-                this.setState({
-                    setrika: setrikaItem,
-                    setrikaKey: Object.keys(setrikaItem)
-                })
-
-                this.setState({
-                    kiloan: kiloanItem,
-                    kiloanKey: Object.keys(kiloanItem)
-                })
-
-            })
-    }
     render() {
-        const { kiloan, kiloanKey, setrika, setrikaKey } = this.state
         return (
-            <View style={styles.page}>
-                <View style={styles.header}>
-                    <Text style={styles.title}>Hasil Pesanan</Text>
-                    <View style={styles.garis} />
-                </View>
-                <ScrollView showsVerticalScrollIndicator={false}>
-                    <View style={styles.listmenu}>
-                        {setrikaKey.length > 0 ? (
-                            kiloanKey.map((key) => (
-                                <CardSetrika key={key} setrikaItem={setrika[key]} id={key} />
-                            ))
-                        ) : (
-                                <Text>Daftar Kosong</Text>
-                            )}
-                    </View>
-                </ScrollView>
+            <View style={styles.container}>
+                <TouchableOpacity onPress={() => this.props.navigation.navigate('ListKiloan')}>
+                    <PesananAktif title="List Menu Kiloan" status="Silahkan klik disini" />
+                </TouchableOpacity>
+                <TouchableOpacity onPress={() => this.props.navigation.navigate('ListSatuan')}>
+                    <PesananAktif title="List Menu Satuan" status="Silahkan klik disini" />
+                </TouchableOpacity>
+                <TouchableOpacity onPress={() => this.props.navigation.navigate('ListVip')}>
+                    <PesananAktif title="List Menu Vip" status="Silahkan klik disini" />
+                </TouchableOpacity>
+                <TouchableOpacity onPress={() => this.props.navigation.navigate('ListKarpet')}>
+                    <PesananAktif title="List Menu Karpet" status="Silahkan klik disini" />
+                </TouchableOpacity>
+                <TouchableOpacity onPress={() => this.props.navigation.navigate('ListSetrika')}>
+                    <PesananAktif title="List Menu Setrika" status="Silahkan klik disini" />
+                </TouchableOpacity>
+                <TouchableOpacity onPress={() => this.props.navigation.navigate('ListEkspress')}>
+                    <PesananAktif title="List Menu Ekspress" status="Silahkan klik disini" />
+                </TouchableOpacity>
             </View>
         )
     }
@@ -64,23 +32,8 @@ export class Pesanan extends Component {
 export default Pesanan
 
 const styles = StyleSheet.create({
-    page: {
+    container: {
         flex: 1,
+        margin: 25
     },
-    header: {
-        paddingHorizontal: 30,
-        paddingTop: 30,
-    },
-    title: {
-        fontSize: 20,
-        fontWeight: 'bold',
-    },
-    garis: {
-        borderWidth: 1,
-        marginTop: 10,
-    },
-    listmenu: {
-        paddingHorizontal: 30,
-        marginTop: 20,
-    },
-});
+})

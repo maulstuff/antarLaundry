@@ -24,7 +24,7 @@ export default class Ekspress extends Component {
 
     onSubmit = () => {
         if (this.state.nama && this.state.nomorHP && this.state.alamat && this.state.ekspress) {
-            const menuEkspress = FIREBASE.database().ref('Menu Setrika');
+            const menuEkspress = FIREBASE.database().ref('Menu Ekspress');
             const meekspress = {
                 nama: this.state.nama,
                 nomorHP: this.state.nomorHP,

@@ -74,7 +74,7 @@ export default class Kiloan extends Component {
                     namaState="alamat"
                 />
                 <InputData
-                    label="Jumlah Kiloan /kg :"
+                    label="Jumlah Kiloan /kg Rp. 10.000 :"
                     placeholder="Masukkan Jumlah Kiloan"
                     keyboardType="number-pad"
                     onChangeText={this.onChangeText}

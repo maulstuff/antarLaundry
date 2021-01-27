@@ -1,6 +1,6 @@
 import React from 'react';
-import {StyleSheet, Text, View, Dimensions} from 'react-native';
-import {WARNA_UTAMA} from '../../utils/constant';
+import { StyleSheet, Text, View, Dimensions } from 'react-native';
+import { WARNA_UTAMA } from '../../utils/constant';
 import ButtonIcon from '../ButtonIcon';
 import Gap from '../Gap';
 
@@ -10,7 +10,7 @@ const Saldo = () => {
       <View style={styles.informasiSaldo}>
         <View style={styles.text}>
           <Text style={styles.labelSaldo}>Saldo :</Text>
-          <Text style={styles.valueSaldo}>Rp. 100.000</Text>
+          <Text style={styles.valueSaldo}>Rp. 0</Text>
         </View>
         <View style={styles.text}>
           <Text style={styles.labelPoint}>Antar Point :</Text>

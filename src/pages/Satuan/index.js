@@ -73,7 +73,7 @@ export default class Satuan extends Component {
                     namaState="alamat"
                 />
                 <InputData
-                    label="Jumlah Baju /pcs :"
+                    label="Jumlah Baju /pcs Rp. 1000:"
                     placeholder="Masukkan Jumlah Baju"
                     keyboardType="number-pad"
                     onChangeText={this.onChangeText}

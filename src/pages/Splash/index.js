@@ -6,7 +6,7 @@ const Splash = ({ navigation }) => {
 
     useEffect(() => {
         setTimeout(() => {
-            navigation.replace('Login');
+            navigation.replace('LoginAwal');
         }, 3000)
     }, [navigation]);
 

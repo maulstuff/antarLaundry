@@ -22,7 +22,7 @@ const Home = ({ navigation }) => {
           <Image source={Logo} style={styles.logo} />
           <View style={styles.hello}>
             <Text style={styles.selamat}>Selamat Datang, </Text>
-            <Text style={styles.username}>Good People </Text>
+            <Text style={styles.username}>Ahmad Jalaludin </Text>
           </View>
         </ImageBackground>
         <Saldo />
@@ -48,7 +48,12 @@ const Home = ({ navigation }) => {
               <ButtonIcon title="Ekspress" type="layanan" />
             </TouchableOpacity>
           </View>
-          <Text style={styles.label}>Instruksi untuk pemesanan</Text>
+          <Text style={styles.label}>Instruksi Order Laundry</Text>
+          <Text style={styles.isi}>1. Silahkan Pilih menu layanan diatas </Text>
+          <Text style={styles.isi}>2. Lalu isi data diri dan juga orderan </Text>
+          <Text style={styles.isi}>3. Jika sudah, maka tunggu kurir datang untuk mengambil pakaian </Text>
+          <Text style={styles.isi}>4. Jika ingin membatalkan pesanan, masuk ke menu pesanan. Dan lalu klik tombol batalkan pesanan </Text>
+          <Text style={styles.isi}>*Untuk masalah pembayaran masih menggunakan sistem bayar ditempat </Text>
         </View>
       </ScrollView>
     </View>
@@ -108,4 +113,9 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 20,
     borderTopLeftRadius: 20,
   },
+  isi: {
+    fontSize: 15,
+    fontFamily: 'TitilliumWeb-Regular',
+    marginTop: 20
+  }
 });
